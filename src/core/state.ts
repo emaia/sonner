@@ -261,7 +261,7 @@ class Observer<TContent = any> {
 
   custom = (jsx: (id: number | string) => TContent, data?: ExternalToast<TContent>) => {
     const id = data?.id || toastsCounter++;
-    this.create({ jsx: jsx(id), id, ...data });
+    this.create({ jsx: jsx(id), ...data, id });
     return id;
   };
 

@@ -1,14 +1,41 @@
-https://github.com/vallezw/sonner/assets/50796600/59b95cb7-9068-4f3e-8469-0b35d9de5cf0
-
-[Sonner](https://sonner.emilkowal.ski/) is an opinionated toast component for React. You can read more about why and how it was built [here](https://emilkowal.ski/ui/building-a-toast-component).
+[Sonner](https://github.com/emaia/sonner) is an opinionated toast component for React and Vanilla. Fork from [sonner](https://github.com/emilkowalski/sonner)
 
 ## Usage
 
 To start using the library, install it in your project:
 
 ```bash
-npm install sonner
+npm install @emaia/sonner
 ```
+
+### Vanilla
+
+```js
+
+import { createToaster, toast } from 'sonner/vanilla';
+
+const toaster = createToaster({
+  position: 'bottom-right',
+  theme: 'system',
+  richColors: true,
+  closeButton: true,
+  expand: false,
+  duration: 4000,
+  gap: 14,
+  visibleToasts: 3,
+});
+
+// Use toasts
+toast('Hello World!');
+toast.success('Operation successful!');
+toast.error('Something went wrong!');
+toast.info('Did you know?');
+toast.warning('Be careful!');
+toast.loading('Loading...');
+
+```
+
+### React
 
 Add `<Toaster />` to your app, it will be the place where all your toasts will be rendered.
 After that you can use `toast()` from anywhere in your app.
@@ -30,4 +57,4 @@ function App() {
 
 ## Documentation
 
-Find the full API reference in the [documentation](https://sonner.emilkowal.ski/getting-started).
+Find the full API reference in the [documentation](https://github.com/emaia/sonner).

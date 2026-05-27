@@ -1,7 +1,7 @@
 {
-  "name": "sonner",
-  "version": "2.0.7",
-  "description": "An opinionated toast component for React.",
+  "name": "@emaia/sonner",
+  "version": "2.1.1",
+  "description": "An opinionated toast component for React/Vanilla.",
   "exports": {
     ".": {
       "import": {
@@ -13,6 +13,39 @@
         "default": "./dist/index.js"
       },
       "default": "./dist/index.js"
+    },
+    "./core": {
+      "import": {
+        "types": "./dist/core/index.d.mts",
+        "default": "./dist/core/index.mjs"
+      },
+      "require": {
+        "types": "./dist/core/index.d.ts",
+        "default": "./dist/core/index.js"
+      },
+      "default": "./dist/core/index.js"
+    },
+    "./react": {
+      "import": {
+        "types": "./dist/react/index.d.mts",
+        "default": "./dist/react/index.mjs"
+      },
+      "require": {
+        "types": "./dist/react/index.d.ts",
+        "default": "./dist/react/index.js"
+      },
+      "default": "./dist/react/index.js"
+    },
+    "./vanilla": {
+      "import": {
+        "types": "./dist/vanilla/index.d.mts",
+        "default": "./dist/vanilla/index.mjs"
+      },
+      "require": {
+        "types": "./dist/vanilla/index.d.ts",
+        "default": "./dist/vanilla/index.js"
+      },
+      "default": "./dist/vanilla/index.js"
     },
     "./dist/styles.css": "./dist/styles.css"
   },
@@ -37,15 +70,15 @@
     "snackbar",
     "message"
   ],
-  "author": "Emil Kowalski <e@emilkowal.ski>",
+  "author": "Emaia <eu@emaia.dev>",
   "license": "MIT",
-  "homepage": "https://sonner.emilkowal.ski/",
+  "homepage": "https://github.com/emaia/sonner",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emilkowalski/sonner.git"
+    "url": "git+https://github.com/emaia/sonner.git"
   },
   "bugs": {
-    "url": "https://github.com/emilkowalski/sonner/issues"
+    "url": "https://github.com/emaia/sonner/issues"
   },
   "devDependencies": {
     "@playwright/test": "^1.49.1",
@@ -62,5 +95,8 @@
     "react": "^18.0.0 || ^19.0.0 || ^19.0.0-rc",
     "react-dom": "^18.0.0 || ^19.0.0 || ^19.0.0-rc"
   },
-  "packageManager": "pnpm@9.15.9"
+  "packageManager": "pnpm@9.15.9",
+  "publishConfig": {
+    "access": "public"
+  }
 }
